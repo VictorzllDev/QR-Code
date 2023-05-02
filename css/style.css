@@ -1,0 +1,108 @@
+/* Fonte */
+:root {
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* Zerando margens, paddings e bordas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Corpo */
+body {
+  font-family: var(--font-family);
+  background: url('../img/background.png') center / cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Conteúdo */
+main {
+  backdrop-filter: blur(0.5em);
+  background-color: rgba(44, 31, 57, 0.5);
+  border-radius: 24px;
+  padding: 24px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+  border-right: none;
+}
+
+/* Textarea */
+textarea {
+  font-family: var(--font-family);
+  padding: 12px;
+  margin: 0 0 12px;
+  height: 60px;
+  background: #FCE3A6;
+  border: 1px solid #000;
+  border-radius: 12px;
+}
+
+textarea:focus {
+  outline: none;
+  border: 2px solid #BA4654;
+}
+
+/* Botão */
+.button-style {
+  background: #2C1F39;
+  color: #fff;
+  height: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(114,151,161, 0.5);
+  outline: none;
+  text-transform: capitalize;
+}
+
+.button-style:focus {
+  border: 1px solid #BA4654;
+}
+
+/* Imagem */
+figure {
+  min-height: 24px;
+}
+
+figure img {
+  max-width: 250px;
+  border-radius: 24px;
+  margin: 12px 0;
+}
+
+/* Alert */
+#alert{
+	padding: 12px;
+	height: 50px;
+	max-width: 250px;
+	background: #fff;
+	border-radius: 5px;
+	position: fixed;
+	bottom: 24px;
+	right: 24px;
+	transition: transform 2s;
+	transform: translateX(200%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+
+}
+#alert #progresso{
+	content: '';
+	width: 100%;
+	height: 5px;
+	background: blue;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	transition: 2s transform;
+}
