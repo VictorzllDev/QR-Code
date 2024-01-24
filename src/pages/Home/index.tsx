@@ -2,7 +2,6 @@ import { useSearchParams } from 'react-router-dom'
 
 export default function Home(): JSX.Element {
   let [searchParams, setSearchParams] = useSearchParams()
-
   let url: string | null = searchParams.get('url')
 
   return (
@@ -11,17 +10,22 @@ export default function Home(): JSX.Element {
         <input
           type="text"
           placeholder="https://google.com"
-          defaultValue={url ?? ''}
+          value={url ?? ''}
           onChange={(e) => setSearchParams({ url: e.target.value })}
-          className="h-14 w-full rounded border-2 px-3 text-black outline-none duration-300 focus:border-2 focus:border-primary"
+          className="h-14 w-full rounded border-2 px-3 text-black outline-none duration-300 focus:border-2 focus:border-blue-400"
         />
-        <img
-          src=""
-          className="h-auto w-72 rounded object-cover object-center"
-        />
-        <button className="h-14 w-full rounded bg-primary/80 duration-300 hover:bg-primary">
-          Gerar QR-Code
-        </button>
+        {url ? (
+          <img
+            src={
+              url
+                ? `https://chart.googleapis.com/chart?chs=300x300&chld=|2&cht=qr&chl=${url}`
+                : ''
+            }
+            className="w-72 rounded object-cover object-center"
+          />
+        ) : (
+          ''
+        )}
       </form>
     </main>
   )
