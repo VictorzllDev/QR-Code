@@ -5,12 +5,12 @@ import ErrorPage from './pages/ErrorPage/index.tsx'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/QR-Code',
     errorElement: <ErrorPage />,
     element: <App />,
     children: [
       {
-        path: '/',
+        path: '/QR-Code',
         element: <Home />,
       },
     ],
