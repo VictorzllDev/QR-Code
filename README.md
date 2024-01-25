@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+# QRCode Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao QRCode Generator! Este é um site simples desenvolvido com ReactJS, TypeScript, TailwindCSS,...  que permite gerar QR Codes facilmente.
 
-Currently, two official plugins are available:
+## Como Funciona
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Insira os Dados**: Digite os dados que você deseja incluir no QR Code no campo fornecido.
 
-## Expanding the ESLint configuration
+2. **Visualize o QR Code**: O QR Code será gerado automaticamente e exibido na tela para sua visualização.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologias Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) 
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4.svg?style=for-the-badge&logo=tailwindcss&logoColor=white) 
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Sobre o Projeto
+Implementei conceitos de URL State para gerenciar a URL usando o React-Router-Dom, assegurando que, ao realizar um refresh, a URL permanecerá preservada e não será perdida.
+
+## API Utilizada
+API do Google
+```bash
+https://chart.googleapis.com/chart?
 ```
+[![Docs](https://img.shields.io/badge/Docs-Google-blue.svg?style=for-the-badge&link=https://developers.google.com/chart/infographics/docs/qr_codes?hl=pt-br)](https://developers.google.com/chart/infographics/docs/qr_codes?hl=pt-br)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Contribuindo
+
+Se você tiver sugestões de melhorias, novos recursos ou encontrar problemas, sinta-se à vontade para abrir problemas ou enviar solicitações de pull. Sua contribuição é bem-vinda!
